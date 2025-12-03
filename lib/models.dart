@@ -3,15 +3,16 @@ class UserStatus {
   String username;  
   String? currentSong;
   String? currentArtist;
+  String? albumArt;   
   DateTime lastSeen;  
   bool isOnline;
-  // Changed
 
   UserStatus({
     required this.uuid,
     required this.username,  
     this.currentSong,
     this.currentArtist,
+    this.albumArt, 
     DateTime? lastSeen,    
     this.isOnline = false,
   }) : lastSeen = lastSeen ?? DateTime.now(); 
@@ -21,6 +22,7 @@ class UserStatus {
     'username': username,
     'currentSong': currentSong,
     'currentArtist': currentArtist,
+    'albumArt': albumArt, // ← NEW
     'lastSeen': lastSeen.toIso8601String(),
     'isOnline': isOnline,
   };
@@ -30,6 +32,7 @@ class UserStatus {
     username: json['username'],
     currentSong: json['currentSong'],
     currentArtist: json['currentArtist'],
+    albumArt: json['albumArt'], // ← NEW
     lastSeen: DateTime.parse(json['lastSeen']),
     isOnline: json['isOnline'] ?? false,
   );
