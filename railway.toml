@@ -2,7 +2,7 @@
   builder = "NIXPACKS"
 
 [deploy]
-  startCommand = "./bin/blossom_server"
+  startCommand = "dart run bin/blossom_server.dart"
 
 [env]
   PORT = "8080"
