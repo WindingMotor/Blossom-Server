@@ -2,7 +2,7 @@ import 'dart:io';
 import 'package:shelf/shelf.dart';
 import 'package:shelf/shelf_io.dart';
 import 'package:shelf_cors_headers/shelf_cors_headers.dart';
-import 'lib/server.dart';
+import 'lib/blossom_server.dart';
 
 void main(List<String> args) async {
   final handler = Pipeline()

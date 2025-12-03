@@ -1,19 +1,19 @@
 class UserStatus {
   final String uuid;
-  String username;  // ← Remove final
+  String username;  
   String? currentSong;
   String? currentArtist;
-  DateTime lastSeen;  // ← Add default
+  DateTime lastSeen;  
   bool isOnline;
 
   UserStatus({
     required this.uuid,
-    required this.username,  // ← Fixed constructor
+    required this.username,  
     this.currentSong,
     this.currentArtist,
-    DateTime? lastSeen,     // ← Make nullable
+    DateTime? lastSeen,    
     this.isOnline = false,
-  }) : lastSeen = lastSeen ?? DateTime.now();  // ← Default value
+  }) : lastSeen = lastSeen ?? DateTime.now(); 
 
   Map<String, dynamic> toJson() => {
     'uuid': uuid,
