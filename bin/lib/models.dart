@@ -5,6 +5,7 @@ class UserStatus {
   String? currentArtist;
   DateTime lastSeen;  
   bool isOnline;
+  // Changed
 
   UserStatus({
     required this.uuid,
